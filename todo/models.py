@@ -8,6 +8,9 @@ class Task(models.Model):
     marker = models.BooleanField(default=False)
     tags = models.ManyToManyField("Tag", related_name="tasks")
 
+    class Meta:
+        ordering = ("marker", "-created")
+
     def __str__(self):
         return self.content
 
