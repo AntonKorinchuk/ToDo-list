@@ -60,4 +60,3 @@ def toggle_complate_task(request, pk):
     task.marker = not task.marker
     task.save()
     return HttpResponseRedirect(reverse_lazy("todo:index"))
-
