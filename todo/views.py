@@ -14,11 +14,13 @@ class HomePageView(generic.ListView):
 
 class TaskCreateView(generic.CreateView):
     model = Task
+    fields = "__all__"
     success_url = reverse_lazy("todo:index")
 
 
 class TaskUpdateView(generic.UpdateView):
     model = Task
+    fields = "__all__"
     success_url = reverse_lazy("todo:index")
 
 
@@ -36,10 +38,13 @@ class TagsListView(generic.ListView):
 
 class TagsCreateView(generic.CreateView):
     model = Tag
+    fields = "__all__"
     success_url = reverse_lazy("todo:tag-list")
+
 
 class TagsUpdateView(generic.UpdateView):
     model = Tag
+    fields = "__all__"
     success_url = reverse_lazy("todo:tag-list")
 
 
